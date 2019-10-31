@@ -1,0 +1,14 @@
+version: '2.4'
+
+services:
+    srs:
+        build:
+            dockerfile: Dockerfile
+            context: .
+            target: dev
+        volumes:
+            - ./config:/srs/trunk/conf
+        ports:
+            - "1935:1935"
+
+
